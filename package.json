@@ -7,11 +7,15 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "vue": "^3.2.13",
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.7.1",
+    "micro-slider": "^1.1.0",
+    "owl.carousel": "^2.3.4",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.30",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0"
