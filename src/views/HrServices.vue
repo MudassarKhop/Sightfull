@@ -19,15 +19,16 @@
       <br>
       <br>
 </Section>
+<FooterComp />
 </template>
 <script>
 import CardCompThree from '@/components/CardCompThree.vue';
 import NavBar from '@/components/NavBar.vue';
-
+import FooterComp from '@/components/FooterComp.vue';
 
 export default {
 components:{
-    CardCompThree, NavBar
+    CardCompThree, NavBar, FooterComp
 }
 }
 </script>
