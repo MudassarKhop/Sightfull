@@ -6,7 +6,7 @@
       <h3>OUR EXPERTS ARE HERE TO HELP!</h3>
     </div>
     <div class="contact-btn">
-      <button>LETS GET STARTED</button>
+      <button><router-link to="/contact">LETS GET STARTED</router-link></button>
     </div>
   </div>
 </section>
@@ -115,6 +115,10 @@ border: none;
 background-color: #233070;
 color: white;
 border: 1px solid #74809842;
+}
+.contact-btn a{
+  text-decoration: none;
+  color: white;
 }
 .footer{
 height: 45vh;
