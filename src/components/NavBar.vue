@@ -1,43 +1,76 @@
 <template>
   <div class="nav-menu">
-      <img src="../assets/SD v7.png" alt="">
-  
-      <i @click="showMenu()" class="fa-solid fa-bars"></i>
-  <div
-  class="nav-content"
-  :class="this.showMobileMenu ? 'open-menu' : 'closed-menu'"
-  >
-  <div class="logo"><img src="../assets/SD v7.png" alt=""></div>
-  <div class="nav-items">
-  <router-link style="margin-right: 20px;"  to="/">HOME</router-link>
-  <router-link style="margin-right: 20px;"  to="/vision">OUR VISION & PROMISE</router-link>
-  <router-link style="margin-right: 20px;"  to="/thesightfullway">THE SIGHTFULL WAY</router-link>
-  <router-link style="margin-right: 20px;"  to="/payrollservices">PAYROLL SERVICES</router-link>
-  <router-link style="margin-right: 20px;"  to="/hrservices">HR SERVICES</router-link>
-  <div class="login-button">
-    <router-link to="/contact" id="btn-1"><i class="fa-regular fa-envelope"></i></router-link>
-    <router-link to="/clientlogin" id="btn-2"><i class="fa-regular fa-user"></i></router-link>
+    <img src="../assets/SD v7.png" alt="">
+
+    <i @click="showMenu()" class="fa-solid fa-bars"></i>
+    <div class="nav-content" :class="this.showMobileMenu ? 'open-menu' : 'closed-menu'">
+      <div class="logo"><img src="../assets/SD v7.png" alt=""></div>
+      <div class="nav-items">
+        <router-link to="/" @click="refreshPage" style="margin-right: 20px;">HOME</router-link>
+        <router-link style="margin-right: 20px;" to="/vision">OUR VISION & PROMISE</router-link>
+        <router-link style="margin-right: 20px;" to="/thesightfullway">THE SIGHTFULL WAY</router-link>
+        <router-link style="margin-right: 20px;" to="/payrollservices">PAYROLL SERVICES</router-link>
+        <router-link style="margin-right: 20px;" to="/hrservices">HR SERVICES</router-link>
+        <div class="login-button">
+          <router-link to="/contact" id="btn-1" title="Contact Us"><i class="fa-regular fa-envelope"></i></router-link>
+          <router-link to="#" id="btn-2" title="CLIENT LOGIN COMING SOON"><i class="fa-regular fa-user"></i></router-link>
+        </div>
+      </div>
+    </div>
   </div>
-  </div>
-  </div>
-  </div>
-    </template>
-    <script>
-  import { RouterLink } from 'vue-router';
-        export default {
+</template>
+<script>
+import { RouterLink } from 'vue-router';
+export default {
   data() {
-  return {
-  showMobileMenu: false,
-  };
+    return {
+      showMobileMenu: false,
+    };
   },
   methods: {
-  showMenu() {
-  this.showMobileMenu = !this.showMobileMenu;
+    showMenu() {
+      this.showMobileMenu = !this.showMobileMenu;
+    },
+    refreshPage(event) {
+    if (this.$route.path === '/') {
+      event.preventDefault(); // Prevent default link behavior
+      location.reload();
+    } else {
+      this.$router.push('/');
+    }
   },
+    getTitle(path) {
+      switch (path) {
+        case '/':
+          return 'Home - Your Website Name';
+        case '/vision':
+          return 'Our Vision & Promise - Your Website Name';
+        case '/thesightfullway':
+          return 'The Sightfull Way - Your Website Name';
+        case '/payrollservices':
+          return 'Payroll Services - Your Website Name';
+        case '/hrservices':
+          return 'HR Services - Your Website Name';
+        case '/contact':
+          return 'Contact - Your Website Name';
+        case '/clientlogin':
+          return 'Client Login - Your Website Name';
+        default:
+          return 'Your Website Name';
+      }
+    },
   },
-  };
-  </script>
-  <style scoped>
+  watch: {
+    $route(to) {
+      document.title = this.getTitle(to.path);
+    },
+  },
+  mounted() {
+    document.title = this.getTitle(this.$route.path);
+  },
+};
+</script>
+<style scoped>
   .nav-menu {
   background-color: white;
   height: 15vh;
