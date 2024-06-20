@@ -42,21 +42,21 @@ export default {
     getTitle(path) {
       switch (path) {
         case '/':
-          return 'Home - Your Website Name';
+          return 'Home - Sightfull Dynamics';
         case '/vision':
-          return 'Our Vision & Promise - Your Website Name';
+          return 'Our Vision & Promise - Sightfull Dynamics';
         case '/thesightfullway':
-          return 'The Sightfull Way - Your Website Name';
+          return 'The Sightfull Way - Sightfull Dynamics';
         case '/payrollservices':
-          return 'Payroll Services - Your Website Name';
+          return 'Payroll Services - Sightfull Dynamics';
         case '/hrservices':
-          return 'HR Services - Your Website Name';
+          return 'HR Services - Sightfull Dynamics';
         case '/contact':
-          return 'Contact - Your Website Name';
+          return 'Contact - Sightfull Dynamics';
         case '/clientlogin':
-          return 'Client Login - Your Website Name';
+          return 'Client Login - Sightfull Dynamics';
         default:
-          return 'Your Website Name';
+          return 'Sightfull Dynamics';
       }
     },
   },
