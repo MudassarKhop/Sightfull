@@ -10,6 +10,9 @@
     </div>
     </div>
     <div class="form-side">
+      <div class="back-btn">
+        <i @click="goBack" class="fa-solid fa-arrow-left"></i>
+      </div>
       <div class="heading-card-values">
         <p style="text-align: start;"><span>- CLIENT LOGIN</span></p>
         <h1 style="text-align: start; margin-bottom: 15px !important;color: #1d2d35;">Sign in.</h1>
@@ -56,6 +59,12 @@ export default {
     unlockScroll() {
       document.body.style.overflow = '';
     },
+    unlockScroll() {
+      document.body.style.overflow = '';
+    },
+    goBack() {
+      this.$router.go(-1);
+    }
   },
   mounted() {
     this.lockScroll();
@@ -88,7 +97,36 @@ export default {
   align-items: center;
   background-image: radial-gradient(54.35% 54.35% at 13.82% 7%, #162051 0%, #161B32 100%);
 }
-
+.back-btn{
+  display: flex;
+  position: absolute;
+  margin-bottom: 750px;
+  height: 8%;
+  width: 30%;
+  color: #161B32;
+  font-size: 25px;
+}
+.fa-arrow-left{
+  font-size: 15px;
+height: 40px;
+width: 40px;
+border-radius: 50%;
+border: 1px solid #161B32;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+text-align: center;
+transition: 0.4s ease-in-out;
+}
+.fa-arrow-left:hover{
+background-color: #e79f21;
+border: 1px solid #e79f21;
+color: white;
+cursor: pointer;
+transition: 0.4s ease-in-out;
+}
 .form-side {
   width: 40%;
   height: 100%;

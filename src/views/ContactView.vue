@@ -12,11 +12,14 @@
       </div>
     </div>
     <div class="form-side">
+      <div class="back-btn">
+        <i @click="goBack" class="fa-solid fa-arrow-left"></i>
+      </div>
       <div class="heading-card-values">
         <p style="text-align: start;"><span>- CONTACT US</span></p>
         <h1 style="text-align: start; margin-bottom: 15px !important">Stay in touch.</h1>
       </div>
-      <form action="https://formspree.io/f/mrgdynyj" method="POST">
+      <form action="https://formspree.io/f/mjkbbbpr" method="POST">
         <label id="name">
           <input type="text" name="name" placeholder="Name" v-model="form.name" />
           <input type="text" name="surname" placeholder="Surname" v-model="form.surname" />
@@ -37,16 +40,14 @@
         </div>
       </form>
       <div class="some-text">
-      <p>Unsure about something? Return to <router-link to="/">homepage</router-link>.</p>
+        <p>Unsure about something? Return to <router-link to="/">homepage</router-link>.</p>
+      </div>
     </div>
-    </div>
-
   </section>
 </template>
 
 <script>
 export default {
-
   data() {
     return {
       form: {
@@ -66,6 +67,9 @@ export default {
     unlockScroll() {
       document.body.style.overflow = '';
     },
+    goBack() {
+      this.$router.go(-1);
+    }
   },
   mounted() {
     this.lockScroll();
@@ -75,7 +79,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 /* Your existing styles */
 .contact-form {
@@ -97,7 +100,36 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-
+.back-btn{
+  display: flex;
+  position: absolute;
+  margin-bottom: 750px;
+  height: 8%;
+  width: 30%;
+  color: grey;
+  font-size: 25px;
+}
+.fa-arrow-left{
+  font-size: 15px;
+height: 40px;
+width: 40px;
+border-radius: 50%;
+border: 1px solid grey;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+text-align: center;
+transition: 0.4s ease-in-out;
+}
+.fa-arrow-left:hover{
+background-color: #e79f21;
+border: 1px solid #e79f21;
+color: white;
+cursor: pointer;
+transition: 0.4s ease-in-out;
+}
 .form-side {
   width: 40%;
   height: 100%;
@@ -323,7 +355,7 @@ transition: 0.4s ease-in-out;
 }
 
 .some-text{
-  margin-top: 750px;
+  margin-top: 800px;
   position: absolute
 }
 

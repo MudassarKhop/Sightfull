@@ -69,10 +69,10 @@
             <p> They've even been helpful with advice on labor issues. I highly recommend them to any business!</p>
           </div>
           <div class="img">
-            <img src="../assets/women.png" alt="">
+            <img src="../assets/Man.png" alt="">
           </div>
           <div class="name">
-            <h1>Melanie Govender</h1>
+            <h1>Yaseen Adam</h1>
             <h3>BP SANDOWN</h3>
           </div>
         </div>

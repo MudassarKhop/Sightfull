@@ -17,9 +17,9 @@
   <div class="img">
     <img src="../assets/services-3.png" alt="">
   </div>
-    <!-- <div class="png2">
-      <img id="png2" src="../assets/image (1).png" alt="">
-    </div> -->
+    <div class="png2">
+      <img id="png2" src="https://i.postimg.cc/VNmx3t74/image.png" alt="">
+    </div>
   </section>
   <section class="home-2">
     <div class="company-logos">
@@ -67,7 +67,7 @@
 </div>
 <div class="card-num">
   <h1 style="margin-bottom: 15px !important;">27000</h1>
-  <p style="text-align: center; font-size: 22px; color: #e79f21;">NUMBER OF MONTHLY PAYSLIPS PROCESSED</p>
+  <p style="text-align: center; font-size: 22px; color: #e79f21;">MONTHLY PAYSLIPS PROCESSED</p>
 </div>
 </div>
   </section>
@@ -393,6 +393,14 @@ font-family: regular;
 /* font-weight: 600; */
 letter-spacing: 1.25px;
 font-size: 14px;
+transition: 0.3s ease-in-out
+}
+.btn-2 a{
+  transition: 0.3s ease-in-out
+}
+.btn-2 a:hover{
+  color: #e79f21;
+  transition: 0.3s ease-in-out
 }
 .fa-phone,
 .fa-gear{
